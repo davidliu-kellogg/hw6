@@ -85,7 +85,6 @@ window.addEventListener('DOMContentLoaded', async function(event) {
         classList = this.className.split(' ')
         for(var i = 0; i<classList.length ; i++){
           if(classList[i].indexOf('movie-')>=0){
-            console.log(classList[i])
             movieId = classList[i]
           }
         }
