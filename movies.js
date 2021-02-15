@@ -90,12 +90,17 @@ window.addEventListener('DOMContentLoaded', async function(event) {
         }
         // console.log(event.target)
         if(this.classList.contains('opacity-20')){
-          this.classList.remove('opacity-20')
-          db.collection('watched').doc(movieId).delete()
+
+          db.collection('watched').doc(movieId).delete().then(() => {
+            this.classList.remove('opacity-20')
+            // console.log('delete succeeded!');
+          });
         }else{
-          this.classList.add('opacity-20')
           db.collection("watched").doc(movieId).set({
-          })
+          }).then(() => {
+            this.classList.add('opacity-20')
+            // console.log('add succeeded!');
+          });
         }
         
       })
