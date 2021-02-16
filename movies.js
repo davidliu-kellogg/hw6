@@ -78,7 +78,7 @@ window.addEventListener('DOMContentLoaded', async function(event) {
     for (var i = 0, element; element = filters[i]; i++) {
       
       element.addEventListener('click',async function(event){
-
+        event.preventDefault()
         // console.log(this.classList)
         let movieId = ''
         classList = this.className.split(' ')
