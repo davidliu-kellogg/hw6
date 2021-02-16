@@ -21,9 +21,8 @@ window.addEventListener('DOMContentLoaded', async function(event) {
   let response = await fetch(url)
   let json = await response.json()
   let movies = json.results
-  // console.log(movies)
+  console.log(json)
   let db = firebase.firestore()
-
   // ⬆️ ⬆️ ⬆️ 
   // End Step 1
   
